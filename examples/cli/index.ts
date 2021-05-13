@@ -1,16 +1,16 @@
 import yargs from "yargs";
-import { AnnouncementContentFormatter, AnnouncementFormatter } from "../src/formatter/announcement";
-import { StdpkgFormatter } from "../src/formatter/stdpkg";
-import { GetJson } from "../src/http/get_json";
-import { GetAnnouncement, ListAnnouncements } from "../src/path/announcements";
+import { AnnouncementContentFormatter, AnnouncementFormatter } from "./formatter/announcement";
+import { StdpkgFormatter } from "./formatter/stdpkg";
+import { GetJson } from "../../src/http/get_json";
+import { GetAnnouncement, ListAnnouncements } from "../../src/path/announcements";
 import {
   Announcement,
   AnnouncementContentTypeChecker,
   AnnouncementTypeChecker,
-} from "../src/types/announcements/types";
+} from "../../src/types/announcements/types";
 import {
   StandardPackageTypeCheckerWrapper,
-} from "../src/types/stdpkg/types";
+} from "../../src/types/stdpkg/types";
 
 yargs
   .scriptName("schweb-parser-cli")

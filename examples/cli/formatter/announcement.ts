@@ -1,4 +1,4 @@
-import type { Announcement, AnnouncementAttachments, AnnouncementContent } from "../types/announcements/types";
+import type { Announcement, AnnouncementAttachments, AnnouncementContent } from "../../../src/types/announcements/types";
 
 export const AnnouncementFormatter = ({ id, title, url }: Announcement) => `ID\t${id}
 標題\t${title}

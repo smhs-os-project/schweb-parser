@@ -1,6 +1,6 @@
 import pino from "pino";
 
-export const LEVEL = "debug";
+export const LEVEL = "info";
 
 export const rootLogger = pino({
   name: "schweb-parser",
