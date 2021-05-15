@@ -1,7 +1,7 @@
 import { AnnouncementEndpoint } from "./root";
 
-export const ListAnnouncements = (category: string) =>
+export const ListAnnouncementsEndpoint = (category: string) =>
   AnnouncementEndpoint(`/${category}-announcements.json`);
 
-export const GetAnnouncement = (category: string, id: string) =>
+export const GetAnnouncementEndpoint = (category: string, id: string) =>
   AnnouncementEndpoint(`/announcements/${category}/${id}.json`);
