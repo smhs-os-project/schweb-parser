@@ -1,16 +1,14 @@
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ListAnnouncements = exports.GetAnnouncement = void 0;
-const get_json_1 = require("./http/get_json");
-const announcements_1 = require("./path/announcements");
-const types_1 = require("./types/announcements/types");
-const types_2 = require("./types/stdpkg/types");
-const GetAnnouncement = async (category, id) => await get_json_1.GetJson(announcements_1.GetAnnouncementEndpoint(category, id), types_2.StandardPackageTypeCheckerWrapper(types_1.AnnouncementContentTypeChecker));
-exports.GetAnnouncement = GetAnnouncement;
-const ListAnnouncements = async (category) => await get_json_1.GetJson(announcements_1.ListAnnouncementsEndpoint(category), types_2.StandardPackageTypeCheckerWrapper((val) => {
-    return Array.isArray(val)
-        ? !val.map(types_1.AnnouncementTypeChecker).includes(false)
-        : false;
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    Object.defineProperty(o, k2, { enumerable: true, get: function() { return m[k]; } });
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
 }));
-exports.ListAnnouncements = ListAnnouncements;
+var __exportStar = (this && this.__exportStar) || function(m, exports) {
+    for (var p in m) if (p !== "default" && !Object.prototype.hasOwnProperty.call(exports, p)) __createBinding(exports, m, p);
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+__exportStar(require("./src"), exports);
 //# sourceMappingURL=index.js.map
